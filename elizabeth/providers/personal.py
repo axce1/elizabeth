@@ -34,6 +34,7 @@ class Personal(BaseProvider):
         self._store = {
             'age': 0
         }
+        print(dir(self))
 
     def age(self, minimum=16, maximum=66):
         """Get a random integer value.
@@ -86,7 +87,6 @@ class Personal(BaseProvider):
             names = self.data['names'][gender]
         except KeyError:
             raise WrongArgument('gender must be "female" or "male"')
-        print(dir(self))
         return self.random.choice(names)
 
     def surname(self, gender='female'):

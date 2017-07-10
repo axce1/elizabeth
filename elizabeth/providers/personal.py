@@ -152,6 +152,7 @@ class Personal(BaseProvider):
             abby1189.
         """
         try:
+            print(dir(self))
             names = pull('personal.json', 'en')['names'][gender]
             name = self.random.choice(names)
         except KeyError:

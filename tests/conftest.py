@@ -77,12 +77,12 @@ def science(request):
 
 @pytest.fixture(params=locales)
 def structured(request):
-    return elizabeth.Structured(request.param)
+    return elizabeth.Structured()
 
 
 @pytest.fixture(params=locales)
 def text(request):
-    return elizabeth.Text(request.param)
+    return elizabeth.Text()
 
 
 @pytest.fixture()

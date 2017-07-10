@@ -34,6 +34,7 @@ class Personal(BaseProvider):
         self._store = {
             'age': 0
         }
+        print('# # # # # # # # # # # # # # # # # # ')
         print(dir(self))
 
     def age(self, minimum=16, maximum=66):
@@ -152,7 +153,6 @@ class Personal(BaseProvider):
             abby1189.
         """
         try:
-            print(dir(self))
             names = pull('personal.json', 'en')['names'][gender]
             name = self.random.choice(names)
         except KeyError:

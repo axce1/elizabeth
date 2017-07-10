@@ -77,7 +77,7 @@ def science(request):
 
 @pytest.fixture(params=locales)
 def structured(request):
-    return elizabeth.Structured()
+    return elizabeth.Structured(request.param)
 
 
 @pytest.fixture(params=locales)
